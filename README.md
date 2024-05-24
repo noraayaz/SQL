@@ -1,4 +1,4 @@
-﻿# SQL Function: dbo.KontrollSiffra
+﻿# SQL Function: KontrollSiffra.sql
 
 This function takes a Swedish personal identity number (personnummer) as input and returns a boolean value indicating whether it is valid based on its checksum. 
 
@@ -16,7 +16,7 @@ The function is designed for SQL Server and checks the format and calculates the
 *  The actual last digit of the personnummer is then compared against this calculated checksum digit.
 *  The function returns 1 if the last digit matches the calculated checksum, indicating a valid personal number, and 0 otherwise.
 
-# WWI_DW Database Management
+# WWI_DW Database Management: BI_Flöde.sql
 Project Description
 
 This SQL script is designed to establish a data warehouse named WWI_DW, specifically structured to manage historical sales data of the WorldWide Importers (WWI). The script creates dimension and fact tables using a star schema approach to facilitate efficient queries and reporting. Additionally, it includes stored procedures for updating these tables from the WWI operational database.
