@@ -55,7 +55,3 @@ SQL Scripts
 * The repository includes scripts for creating the database, tables, and stored procedures.
 * Additional queries for testing and validating data integrity.
 
-Notes
-
-* The setup assumes the existence of a source database (WideWorldImporters) from which it pulls data.
-* Future enhancements could include more detailed customer dimensions or transaction tables to further enrich the data warehouse.
