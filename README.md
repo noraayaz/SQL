@@ -24,32 +24,32 @@ This SQL script is designed to establish a data warehouse named WWI_DW, specific
 Schema Details
 
 Dimension Tables
-*     DimCustomer: Stores customer details. Includes fields like CustomerID, CustomerName, and CustomerCategoryName.
-*     DimSalesPerson: Contains sales personnel data, combining first and last names into a full name using a persisted computed column.
-*     DimProduct: Manages product information such as SKUNumber and ProductName.
-*     DimDate: Holds detailed date information enabling time-based data analysis.
+* DimCustomer: Stores customer details. Includes fields like CustomerID, CustomerName, and CustomerCategoryName.
+* DimSalesPerson: Contains sales personnel data, combining first and last names into a full name using a persisted computed column.
+* DimProduct: Manages product information such as SKUNumber and ProductName.
+* DimDate: Holds detailed date information enabling time-based data analysis.
 Fact Table
 
-*     FactSales: Captures sales transactions linking all dimensions, with fields such as OrderLineID, CustomerID, SalespersonPersonID, ProductID, OrderDateID, Quantity, and UnitPrice.
+* FactSales: Captures sales transactions linking all dimensions, with fields such as OrderLineID, CustomerID, SalespersonPersonID, ProductID, OrderDateID, Quantity, and UnitPrice.
 Stored Procedures
 
-*     UpdateTablesSP: A comprehensive procedure to refresh the dimension and fact tables from the source operational database (WideWorldImporters). It handles data transformation and loading with considerations for historical data tracking through INSERT_DATE.
+* UpdateTablesSP: A comprehensive procedure to refresh the dimension and fact tables from the source operational database (WideWorldImporters). It handles data transformation and loading with considerations for historical data tracking through INSERT_DATE.
 Key Features
 
-*     Data Integrity: Enforced by primary and foreign keys, ensuring reliable data storage.
-*     Performance Optimization: Use of persisted computed columns to minimize runtime calculations.
-*     Historical Data Management: The INSERT_DATE column in each table allows for tracking changes and analyzing historical data.
+* Data Integrity: Enforced by primary and foreign keys, ensuring reliable data storage.
+* Performance Optimization: Use of persisted computed columns to minimize runtime calculations.
+* Historical Data Management: The INSERT_DATE column in each table allows for tracking changes and analyzing historical data.
 Setup and Usage
 
-1.    Database Creation: Run the initial block to create the WWI_DW database and set it as the current database.
-2.    Table Creation: Execute the commands to create dimension and fact tables.
-3.     Stored Procedure Initialization: Implement the stored procedure for data updates.
-4.     Data Management: Use the EXEC dbo.UpdateTablesSP command to populate and refresh the tables.
+1. Database Creation: Run the initial block to create the WWI_DW database and set it as the current database.
+2. Table Creation: Execute the commands to create dimension and fact tables.
+3. Stored Procedure Initialization: Implement the stored procedure for data updates.
+4. Data Management: Use the EXEC dbo.UpdateTablesSP command to populate and refresh the tables.
 SQL Scripts
 
-*     The repository includes scripts for creating the database, tables, and stored procedures.
-*     Additional queries for testing and validating data integrity.
+* The repository includes scripts for creating the database, tables, and stored procedures.
+* Additional queries for testing and validating data integrity.
 Notes
 
-The setup assumes the existence of a source database (WideWorldImporters) from which it pulls data.
-Future enhancements could include more detailed customer dimensions or transaction tables to further enrich the data warehouse.
+* The setup assumes the existence of a source database (WideWorldImporters) from which it pulls data.
+* Future enhancements could include more detailed customer dimensions or transaction tables to further enrich the data warehouse.
