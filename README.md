@@ -32,7 +32,7 @@ Dimension Tables
 Fact Table
 
 * FactSales: Captures sales transactions linking all dimensions, with fields such as OrderLineID, CustomerID, SalespersonPersonID, ProductID, OrderDateID, Quantity, and UnitPrice.
-* 
+  
 Stored Procedures
 
 * UpdateTablesSP: A comprehensive procedure to refresh the dimension and fact tables from the source operational database (WideWorldImporters). It handles data transformation and loading with considerations for historical data tracking through INSERT_DATE.
